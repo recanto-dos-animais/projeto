@@ -22,6 +22,9 @@ Atualizado em: 21/04/2024
 | Responsável   | Tarefa/Requisito | Iniciado em    | Prazo      | Status | Terminado 
 
 Maria | Preencher documentação | 01/09/2024 | 08/09/2024 | ✔️ | 08/09/2024
+Samuel | Fazer o Slide | 01/09/2024 | 08/09/2024 | ✔️ | 07/09/2024
+Domiciano | Apresentação | 01/09/2024 | 09/09/2024 | 📝 |
+Bruna | Apresentação | 01/09/2024 | 09/09/2024 | 📝 |
 ## Sprint 2
 
 Atualizado em: 21/04/2024
