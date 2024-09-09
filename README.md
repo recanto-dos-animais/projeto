@@ -1,4 +1,4 @@
-# TÍTULO DO PROJETO
+# Projeto Rede do Bem
 
 `ADS`
 
@@ -6,7 +6,9 @@
 
 `2 Periodo`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+O projeto Rede do Bem surgiu a partir da necessidade de facilitar e dar visibilidade ao maravilhoso trabalho realizado pela ONG Recanto dos Animais, que trabalha resgatando animais de situação de vulnerabilidade, encontrando lares, instruindo tutores e oferecendo ajuda veterinária para os animais.
+
+O projeto visa disponibilizar serviços que serão essenciais em todo projeto de recuperação dos animais, desde a possibilidade de alertar sobre possíveis maus tratos e/ou abandonos, até o momento de achar um novo lar para os pequeninos!
 
 ## Integrantes
 
