@@ -17,7 +17,7 @@
 
 ## Slides
 
-Coloque aqui os slides da apresentação
+(https://www.canva.com/design/DAGQNkvLQew/Jys_RfnqTfoMQjFrZ16noA/edit)
 
 ## Vídeo
 
