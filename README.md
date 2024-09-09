@@ -44,7 +44,7 @@ O projeto visa disponibilizar serviços que serão essenciais em todo projeto de
 
 # Apresentação
 
-<li><a href="[presentation/README.md](https://www.canva.com/design/DAGQNkvLQew/Jys_RfnqTfoMQjFrZ16noA/edit)"> Slides da apresentação </a></li>
+Slides da apresentação: https://www.canva.com/design/DAGQNkvLQew/Jys_RfnqTfoMQjFrZ16noA/edit
 
 
 ## Histórico de versões
