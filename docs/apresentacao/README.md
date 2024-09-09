@@ -17,7 +17,7 @@
 
 ## Slides
 
-(https://www.canva.com/design/DAGQNkvLQew/Jys_RfnqTfoMQjFrZ16noA/edit)
+https://www.canva.com/design/DAGQNkvLQew/Jys_RfnqTfoMQjFrZ16noA/edit
 
 ## Vídeo
 
