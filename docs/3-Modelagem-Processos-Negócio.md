@@ -22,6 +22,8 @@ _Apresente aqui uma descrição da sua proposta abordando seus limites e suas li
 
 ### 3.3. Modelagem dos processos
 
-[PROCESSO 1 - Nome do Processo](./processos/processo-1-nome-do-processo.md "Detalhamento do Processo 1.")
+[PROCESSO 1 - Resgate e Adoção de Animais](./processos/processo-1-Resgate-e-Adocao.md " Registro digital dos animais, seleção automatizada de voluntários e parcerias para reduzir custos de cuidados.")
 
-[PROCESSO 2 - Nome do Processo](./processos/processo-2-nome-do-processo.md "Detalhamento do Processo 2.")
+[PROCESSO 2 - Recebimento e Revenda](./processos/processo-2-Recebimento-e-Revenda.md "Coleta, triagem e revenda de doações reutilizáveis; descarte sustentável dos itens não reutilizáveis.")
+
+[PROCESSO 2 - Planejamento de Feiras](./processos/processo-3-Planejamento-Feiras.md " Planejamento via sistema, inscrições online e parcerias para doações durante os eventos.")

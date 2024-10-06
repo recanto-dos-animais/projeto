@@ -17,7 +17,8 @@
 
 ## Slides
 
-https://www.canva.com/design/DAGQNkvLQew/Jys_RfnqTfoMQjFrZ16noA/edit
+https://www.canva.com/design/DAGQNkvLQew/Jys_RfnqTfoMQjFrZ16noA/edit - Sprint 1
+https://www.canva.com/design/DAGSzs-rhHI/KneyVuVOfpreTQnfF4RYTw/edit - Sprint 2
 
 ## Vídeo
 
