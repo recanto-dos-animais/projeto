@@ -44,8 +44,9 @@ O projeto visa disponibilizar serviços que serão essenciais em todo projeto de
 
 # Apresentação
 
-Slides da apresentação: https://www.canva.com/design/DAGQNkvLQew/Jys_RfnqTfoMQjFrZ16noA/edit
-
+Slides da apresentação:
+Sprint 1 - https://www.canva.com/design/DAGQNkvLQew/Jys_RfnqTfoMQjFrZ16noA/edit
+Sprint 2 - https://www.canva.com/design/DAGSzs-rhHI/KneyVuVOfpreTQnfF4RYTw/edit
 
 ## Histórico de versões
 
