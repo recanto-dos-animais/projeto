@@ -14,6 +14,7 @@
  
  ![Exemplo de Arquitetura](./images/arquitetura-exemplo.png)
  
+## 4.1. Processos
 
 ### 4.2. Protótipos de telas
 
