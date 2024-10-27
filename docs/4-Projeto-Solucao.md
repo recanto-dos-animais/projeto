@@ -14,7 +14,46 @@
  
  ![Exemplo de Arquitetura](./images/arquitetura-exemplo.png)
  
-## 4.1. Processos
+## 4.1.1 Processos
+
+Modelo AS IS
+Processo 1: Recebimento de Animais Resgatados e Adoção Temporária
+- Animais resgatados são recebidos pela ONG.
+- A ONG seleciona um dos voluntários cadastrados para oferecer um lar temporário ao animal.
+- O voluntário escolhido se compromete a arcar com todos os custos relacionados ao animal, incluindo alimentação e cuidados médicos.
+
+Processo 2: Recebimento e Revenda de Doações
+- A ONG realiza a montagem de barracas para a coleta de doações, em eventos previamente marcados e divulgados.
+- As doações recebidas são submetidas a um processo de triagem, no qual itens reutilizáveis são separados dos que não possuem condições de reuso.
+- Os produtos reutilizáveis são precificados pela ONG e revendidos para arrecadar fundos destinados às atividades da organização.
+- Itens que não podem ser reaproveitados são descartados de maneira sustentável.
+
+Processo 3: Feiras de Castração e Eventos Relacionados
+- A ONG organiza feiras de castração e outros eventos de conscientização e apoio aos animais.
+- O primeiro passo é a marcação de uma data adequada para o evento, considerando logística e divulgação.
+- A ONG então realiza a divulgação do evento por meio de canais apropriados (redes sociais, parcerias locais, entre outros).
+- Durante o evento, os procedimentos veterinários são realizados, como castração de animais, com todo o suporte técnico necessário.
+- A arrecadação de fundos ou doações durante o evento também pode ocorrer, complementando as ações de apoio da ONG.
+  
+Modelo TO BE
+Processo 1: Recebimento de Animais Resgatados e Adoção Temporária
+- Ao receber os animais resgatados, a ONG utiliza um sistema digital de registro para catalogar dados sobre o animal, como espécie, idade e estado de saúde.
+- A seleção de voluntários para o lar temporário é automatizada por meio de um sistema que sugere os voluntários mais adequados, com base na disponibilidade e histórico de cuidados.
+- A ONG desenvolve parcerias com clínicas veterinárias e pet shops, oferecendo subsídios para alimentação e cuidados médicos dos animais, reduzindo a carga financeira para os voluntários.
+- O acompanhamento do estado do animal é feito regularmente por meio de um sistema de relatórios online, preenchidos pelos voluntários.
+
+Processo 2: Recebimento e Revenda de Doações 
+- Os eventos de coletas são cadastrados e integrados ao site e fica disponível para visualização dos colaboradores e voluntários.
+- Os itens coletados passam por um processo de triagem e categorizados.
+- Os itens são precificados automaticamente com base em uma tabela-padrão.
+- Os itens descartados são registrados e direcionados para  programas de reciclagem.
+
+Processo 3: Feiras de Castração e Eventos Relacionados
+- As feiras de castração e outros eventos são planejados com antecedência por meio de um sistema de gestão de eventos, que permite agendar datas, enviar notificações automáticas para voluntários e participantes, e ajustar a logística.
+- A divulgação é realizada em múltiplos canais simultaneamente.
+- As inscrições para castração são feitas online, facilitando o controle de vagas e a gestão do evento.
+- Durante o evento, o atendimento é otimizado com um sistema de fila digital, que organiza os horários dos procedimentos, reduzindo o tempo de espera.
+- Além da arrecadação de doações durante o evento, parcerias com empresas locais podem ser promovidas, permitindo a doação de produtos e serviços para fortalecer o suporte à ONG.
 
 ### 4.2. Protótipos de telas
 
