@@ -24,9 +24,9 @@ Módulos:
 - ORM JPA;
 - Banco de dados PostgreSQL;
  
- **Exemplo do diagrama de Arquitetura**:
+ **Diagrama da arquitetura de solução**:
  
- ![Exemplo de Arquitetura](./images/arquitetura-exemplo.png)
+ ![Diagrama da arquitetura de solução](./images/arquitetura-solucao-ti.png)
  
 ## 4.1.1 Processos
 
