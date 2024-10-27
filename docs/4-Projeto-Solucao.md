@@ -140,45 +140,82 @@ Veja um exemplo:
 
 <code>
 
- -- Criação da tabela Médico
-CREATE TABLE Medico (
-    MedCodigo INTEGER PRIMARY KEY,
-    MedNome VARCHAR(100)
+CREATE TABLE Admin (
+    id VARCHAR(255) PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    sobrenome VARCHAR(255),
+    email VARCHAR(255) NOT NULL,
+    ddd INT,
+    telefone INT,
+    rua VARCHAR(255),
+    bairro VARCHAR(255),
+    cidade VARCHAR(255),
+    cep INT,
+    senha VARCHAR(255) NOT NULL
 );
 
-
--- Criação da tabela Paciente
-CREATE TABLE Paciente (
-    PacCodigo INTEGER PRIMARY KEY,
-    PacNome VARCHAR(100)
+-- Tabela Usuario
+CREATE TABLE Usuario (
+    id VARCHAR(255) PRIMARY KEY,
+    email VARCHAR(255) NOT NULL,
+    nome VARCHAR(255) NOT NULL,
+    senha VARCHAR(255) NOT NULL,
+    ddd INT,
+    telefone INT
 );
 
--- Criação da tabela Consulta
-CREATE TABLE Consulta (
-    ConCodigo INTEGER PRIMARY KEY,
-    MedCodigo INTEGER,
-    PacCodigo INTEGER,
-    Data DATE,
-    FOREIGN KEY (MedCodigo) REFERENCES Medico(MedCodigo),
-    FOREIGN KEY (PacCodigo) REFERENCES Paciente(PacCodigo)
+-- Tabela Voluntario
+CREATE TABLE Voluntario (
+    id VARCHAR(255) PRIMARY KEY,
+    name VARCHAR(255) NOT NULL,
+    sobrenome VARCHAR(255),
+    email VARCHAR(255) NOT NULL,
+    ddd INT,
+    telefone INT,
+    rua VARCHAR(255),
+    bairro VARCHAR(255),
+    cidade VARCHAR(255),
+    cep INT,
+    senha VARCHAR(255) NOT NULL
 );
 
--- Criação da tabela Medicamento
-CREATE TABLE Medicamento (
-    MdcCodigo INTEGER PRIMARY KEY,
-    MdcNome VARCHAR(100)
+-- Tabela Produto
+CREATE TABLE Produto (
+    id VARCHAR(255) PRIMARY KEY,
+    preco DOUBLE NOT NULL,
+    estado ENUM('NOVO', 'USADO') NOT NULL
 );
 
--- Criação da tabela Prescricao
-CREATE TABLE Prescricao (
-    ConCodigo INTEGER,
-    MdcCodigo INTEGER,
-    Posologia VARCHAR(200),
-    PRIMARY KEY (ConCodigo, MdcCodigo),
-    FOREIGN KEY (ConCodigo) REFERENCES Consulta(ConCodigo),
-    FOREIGN KEY (MdcCodigo) REFERENCES Medicamento(MdcCodigo)
+-- Tabela Doacao
+CREATE TABLE Doacao (
+    id VARCHAR(255) PRIMARY KEY,
+    data DATETIME NOT NULL,
+    doador_id VARCHAR(255) NOT NULL,
+    valor DOUBLE NOT NULL,
+    FOREIGN KEY (doador_id) REFERENCES Usuario(id)
 );
 
+-- Tabela Animal
+CREATE TABLE Animal (
+    id VARCHAR(255) PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    tipo VARCHAR(255) NOT NULL,
+    raca VARCHAR(255),
+    adotado BOOLEAN NOT NULL DEFAULT 0,
+    tutor_id VARCHAR(255),
+    idade INT,
+    FOREIGN KEY (tutor_id) REFERENCES Voluntario(id)
+);
+
+-- Tabela Adocao
+CREATE TABLE Adocao (
+    id VARCHAR(255) PRIMARY KEY,
+    animal_id VARCHAR(255) NOT NULL,
+    adotante_id VARCHAR(255) NOT NULL,
+    data DATE NOT NULL,
+    FOREIGN KEY (animal_id) REFERENCES Animal(id),
+    FOREIGN KEY (adotante_id) REFERENCES Usuario(id)
+);
 </code>
 
 Este script deverá ser incluído em um arquivo .sql na pasta src\bd.
