@@ -195,8 +195,16 @@ Apresente também uma figura explicando como as tecnologias estão relacionadas 
 
 | **Dimensão**   | **Tecnologia**  |
 | ---            | ---             |
-| SGBD           | MySQL           |
-| Front end      | HTML+CSS+JS     |
+| SGBD           | PostgreSQL      |
+| Front end      | React           |
 | Back end       | Java SpringBoot |
-| Deploy         | Github Pages    |
+| Deploy         | Render + Vercel |
+| Wireframes     | Figma           |
+| ORM            | Spring data JPA |
+| IDE Back-end   | IntelliJ IDEA   |
+| IDE Front-end  | VS Code         |
+| Serviço emails | Sendgrid        |
+| Mapa           | Google Maps api |
+| Consulta CEP   | ViaCEP          |
+
 
