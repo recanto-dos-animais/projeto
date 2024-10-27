@@ -154,7 +154,6 @@ CREATE TABLE Admin (
     senha VARCHAR(255) NOT NULL
 );
 
--- Tabela Usuario
 CREATE TABLE Usuario (
     id VARCHAR(255) PRIMARY KEY,
     email VARCHAR(255) NOT NULL,
@@ -164,7 +163,6 @@ CREATE TABLE Usuario (
     telefone INT
 );
 
--- Tabela Voluntario
 CREATE TABLE Voluntario (
     id VARCHAR(255) PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
@@ -179,14 +177,12 @@ CREATE TABLE Voluntario (
     senha VARCHAR(255) NOT NULL
 );
 
--- Tabela Produto
 CREATE TABLE Produto (
     id VARCHAR(255) PRIMARY KEY,
     preco DOUBLE NOT NULL,
     estado ENUM('NOVO', 'USADO') NOT NULL
 );
 
--- Tabela Doacao
 CREATE TABLE Doacao (
     id VARCHAR(255) PRIMARY KEY,
     data DATETIME NOT NULL,
@@ -195,7 +191,6 @@ CREATE TABLE Doacao (
     FOREIGN KEY (doador_id) REFERENCES Usuario(id)
 );
 
--- Tabela Animal
 CREATE TABLE Animal (
     id VARCHAR(255) PRIMARY KEY,
     nome VARCHAR(255) NOT NULL,
@@ -207,7 +202,6 @@ CREATE TABLE Animal (
     FOREIGN KEY (tutor_id) REFERENCES Voluntario(id)
 );
 
--- Tabela Adocao
 CREATE TABLE Adocao (
     id VARCHAR(255) PRIMARY KEY,
     animal_id VARCHAR(255) NOT NULL,
