@@ -4,11 +4,25 @@
 
 ## 4.1. Arquitetura da solução
 
+Passo a passo do funcionamento do projeto:
 
-......  COLOQUE AQUI O SEU TEXTO E O DIAGRAMA DE ARQUITETURA .......
+- O usuário interage com a aplicação feita em React;
+- A aplicação react se comunica com a api feita em Java, enviando uma request com os parâmetros e configurações necessários;
+- A camada de controller da api faz uma chamada ao service necessário;
+- O service solicita faz uma requisição ao banco de dados através do JPA ou faz uma chamada a algum service externo;
+- O service responde ao chamado do controller com o que foi solicitado ou lançará uma exceção caso algo tenha dado errado no processamento;
+- O controller trata a exceção e fornece a resposta adequada ao cliente, com base no que ocorreu durante o tratamento;
+- A aplicação react recebe a resposta da api e renderiza a tela conforme esta resposta
 
- Inclua um diagrama da solução e descreva os módulos e as tecnologias
- que fazem parte da solução. Discorra sobre o diagrama.
+Módulos:
+- Navegador Web onde estará rodando a aplicação front-end;
+- Aplicação front-end feita em React;
+- LocalStorage;
+- API em Java;
+- Services internos;
+- Services externos;
+- ORM JPA;
+- Banco de dados PostgreSQL;
  
  **Exemplo do diagrama de Arquitetura**:
  
