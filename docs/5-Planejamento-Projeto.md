@@ -38,6 +38,17 @@ Atualizado em: 06/10/2024
 | Bruna         | Slide finalizado                | 01/10/2024   | 06/10/2024 | ✔️      | 06/10/2024  |
 
 
+## Sprint 3
+
+Atualizado em: 27/10/2024
+
+| Responsável   | Tarefa/Requisito                | Iniciado em  | Prazo      | Status | Terminado   |
+|---------------|---------------------------------|--------------|------------|--------|-------------|
+| Maria         | WireFrame das telas             | 27/10/2024   | 27/10/2024   | ✔️    | 27/10/2024  |
+| Samuel        | Arquitetura da solução          | 24/10/2024   | 27/10/2024 | ✔️      | 24/09/2024  |
+| Domiciano     | UML                             | 24/10/2024   | 27/10/2024 | ✔️      | 27/10/2024  |
+| Bruna         | Slide finalizado                | 27/10/2024   | 27/10/2024 | ✔️      | 27/10/2024  |
+
 Legenda:
 - ✔️: terminado
 - 📝: em execução

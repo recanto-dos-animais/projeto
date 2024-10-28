@@ -74,7 +74,19 @@ Processo 3: Feiras de Castração e Eventos Relacionados
 Visão geral da interação do usuário pelas telas do sistema e protótipo interativo das telas com as funcionalidades que fazem parte do sistema (wireframes).
 Apresente as principais interfaces da plataforma. Discuta como ela foi elaborada de forma a atender os requisitos funcionais, não funcionais e histórias de usuário abordados nas <a href="02-Especificação do Projeto.md"> Especificação do Projeto</a>.
 A partir das atividades de usuário identificadas na seção anterior, elabore o protótipo de tela de cada uma delas.
-![Exemplo de Wireframe](images/wireframe-example.png)
+
+
+![Home](images/Wireframe/home.png)
+Pagina principal falando sobre o intuito do projeto
+
+![animais](images/Wireframe/animais.png)
+Pagina que mostra os animais que estão para adoção
+
+![Como Ajudar](images/Wireframe/Como%20ajudar_.png)
+Pagina que mostra os meios de doação
+
+![Voluntario](images/Wireframe/Login%20Voluntario.png)
+Os voluntarios teram acesso ao uma conta, onde podem fazer posts de animais que estejam cuidando.
 
 São protótipos usados em design de interface para sugerir a estrutura de um site web e seu relacionamentos entre suas páginas. Um wireframe web é uma ilustração semelhante do layout de elementos fundamentais na interface.
  
