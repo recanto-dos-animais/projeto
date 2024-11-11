@@ -3,6 +3,7 @@ import dotenv from 'dotenv'
 import cors from 'cors'
 
 import animalController from './controllers/Animal.js'
+import userController from './controllers/User.js'
 
 dotenv.config()
 
@@ -17,6 +18,7 @@ app.use(express.urlencoded({
 app.use(express.json())
 
 app.use('/animais', animalController)
+app.use('/usuarios', userController)
 
 app.get('/', (req, res) => {
     return res.end('Hello world!')
