@@ -46,6 +46,12 @@ class UserService{
 
         throw new Error('Usuário com este email não existe')
     }
+
+    async getUserById(id){
+        const res = await db('SELECT cod_usuario, nome, telefone, email, data_nascimento FROM usuarios WHERE cod_usuario = $1', [id])
+
+        return res.rows[0] || null
+    }
 }
 
 

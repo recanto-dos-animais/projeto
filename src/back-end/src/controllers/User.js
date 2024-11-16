@@ -46,11 +46,22 @@ router.post('/login', async (req, res) => {
     }
 })
 
-router.get('/:id', (req, res) => {
+router.get('/:id', async (req, res) => {
+    const {id} = req.params
+
     try {
-        
+        const user = await userService.getUserById(id)
+
+        if (user !== null)
+            return res.status(200).json(user)
+
+        throw new Error('Usupario com este id não existe.')
     } catch (error) {
         
+        if (error.message ==='Usupario com este id não existe.')
+            return res.status(404).json({error: 'Usuario não encontrado'})
+
+        return res.status(500).json({error: 'Erro interno ao carregar usuário'})
     }
 })
 
