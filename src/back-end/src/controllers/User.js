@@ -1,44 +1,56 @@
 import express from 'express'
 import db from '../../db/db-config.js'
 import { randomUUID } from 'node:crypto'
-import InvalidLogin from '../../errors/InvalidLogin.js'
 import bcrypt from 'bcrypt'
+import UserService from '../services/UserService.js'
+
+const userService = new UserService()
 
 const router = express.Router()
 
 router.post('/registrar', async (req, res) => {
-    const {name, email, password} = req.body
+    const data = req.body
+    data.userCode = randomUUID()
 
     try {
-        const result = await db(`INSERT INTO usuarios (id, nome, email, senha) VALUES ($1, $2, $3, $4) RETURNING id, nome, email`, [randomUUID(), name, email, await bcrypt.hash(password, 10)])
+        const newUser = await userService.addUser(data)
 
-        return res.send(JSON.stringify(result.rows))
+        return res.status(201).json({
+            message: 'Usuário criado com sucesso',
+            status: 201,
+            user: newUser
+        })
     } catch (error) {
-        console.error(error)
+        if (error.message === 'Todos os campos devem estar preenchidos')
+            return res.status(400).json({error: error.message})
+
+        if (error.message === 'Usuário com este e-mail já existe')
+            return res.status(400).json({error: error.message})
+
+        return res.status(500).json({error: 'Erro interno ao criar usuário'})
     }
 })
 
 router.post('/login', async (req, res) => {
     const {email, password} = req.body
 
-    try{
-        const result = await db('SELECT (email, senha) FROM usuarios WHERE email = $1', [email])
+    try {
+        const loginResponse = await userService.login({email, password})
 
-        if (result.rows.length > 0) {
-            const user = result.rows[0]
-
-            if (await bcrypt.compare(password, user.senha)) 
-                return res.status(200).json({
-                    authorized: true
-                })
-
-            return res.status(401).json({error: 'Senha inválida'})
-        }
-
-        return res.status(401).json({error: 'Usuário com este email não existe'})
-    }
-    catch(error){
+        if (loginResponse.authorized)
+            return res.status(200).json(loginResponse)
+    } catch (error) {
+        if (error.message === 'Credenciais inválidas') return res.status(401).json({error: error.message})
+        if (error.message === 'Usuário com este email não existe') return res.status(401).json({error: error.message})
         return res.status(500).send(JSON.stringify({error: 'Erro interno ao processar login.'}))
+    }
+})
+
+router.get('/:id', (req, res) => {
+    try {
+        
+    } catch (error) {
+        
     }
 })
 
