@@ -42,7 +42,7 @@ class UserService{
                         birthDate: validUser.data_nascimento,
                         email: validUser.email  
                     },
-                    token: tokenService.generateToken(validUser)
+                    token: tokenService.generateToken({cod_usuario: validUser.cod_usuario, role: 'user'})
                 }
 
             throw new Error('Credenciais inválidas')

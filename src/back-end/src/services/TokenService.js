@@ -8,7 +8,8 @@ const JWTSECRET = process.env.JWT_SECRET
 class TokenService{
 
     generateToken(user){
-        const token = jwt.sign(
+        console.log(user.cod_usuario + ' ' + user.role)
+        return jwt.sign(
             {id: user.cod_usuario, role: user.role},
             JWTSECRET,
             {expiresIn: '72h'}
