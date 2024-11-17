@@ -81,5 +81,12 @@ deleteVolunteerQuery = `DELETE FROM voluntarios WHERE cod_voluntario = $1`
 deleteAdoptionQuery = `DELETE FROM adocoes WHERE cod_adocao = $1`
 deleteDonationQuery = `DELETE FROM doacoes WHERE cod_doacao = $1`
 
+SELEÇÃO POR ID:
+user = `SELECT * FROM usuarios WHERE cod_usuario = $1`
+admin = `SELECT * FROM admins WHERE cod_admin = $1`
+animal = `SELECT * FROM animais WHERE cod_animal = $1`
+volunteer = `SELECT * FROM voluntarios WHERE cod_voluntario = $1`
+adoption = `SELECT * FROM  adocoes WHERE cod_adocao = $1`
+donation = `SELECT * FROM doacoes WHERE cod_doacao = $1`
 
 
