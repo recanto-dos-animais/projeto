@@ -89,4 +89,12 @@ volunteer = `SELECT * FROM voluntarios WHERE cod_voluntario = $1`
 adoption = `SELECT * FROM  adocoes WHERE cod_adocao = $1`
 donation = `SELECT * FROM doacoes WHERE cod_doacao = $1`
 
+SELECÃO TOTAL:
+users = `SELECT * FROM usuarios`
+admins = `SELECT * FROM admins`
+animals = `SELECT * FROM animais`
+volunteers = `SELECT * FROM voluntarios`
+adoptions = `SELECT * FROM adocoes`
+donations = `SELECT * FROM doacoes`
+
 
