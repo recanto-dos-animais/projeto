@@ -69,9 +69,7 @@ class UserService{
     async getAllUsers(token){
         const decodedToken = tokenService.validateToken(token)
 
-        console.log(decodedToken)
-
-        if (decodedToken.role === 'admin') throw new Error('Permissão negada.')
+        if (decodedToken.role !== 'admin') throw new Error('Permissão negada.')
 
         const res = await db('SELECT cod_usuario, email, nome, telefone FROM usuarios')
 
