@@ -58,7 +58,24 @@ class UserService{
     }
 
     async deleteUser(id){
+        const res = await db('DELETE FROM usuarios WHERE cod_usuario = $1 RETURNING *', [id])
 
+        if (res.rows.length > 0)
+            return true
+
+        throw new Error('Usuário com este id não encontrado')
+    }
+
+    async getAllUsers(token){
+        const decodedToken = tokenService.validateToken(token)
+
+        console.log(decodedToken)
+
+        if (decodedToken.role === 'admin') throw new Error('Permissão negada.')
+
+        const res = await db('SELECT cod_usuario, email, nome, telefone FROM usuarios')
+
+        return res.rows
     }
 }
 
