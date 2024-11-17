@@ -1,0 +1,19 @@
+userQuery = `
+  CREATE TABLE IF NOT EXISTS usuarios (
+    cod_usuario TEXT PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    data_nascimento DATE,
+    telefone VARCHAR(15),
+    email VARCHAR(100) UNIQUE NOT NULL,
+    senha VARCHAR(200) NOT NULL
+  );
+`
+adminQuery = `
+  CREATE TABLE IF NOT EXISTS admins (
+    cod_admin TEXT PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    telefone VARCHAR(15),
+    email VARCHAR(100) UNIQUE NOT NULL,
+    senha VARCHAR(200) NOT NULL
+   );
+  `
