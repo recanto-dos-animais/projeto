@@ -1,5 +1,8 @@
 import db from '../../db/db-config.js'
 import bcrypt from 'bcrypt'
+import TokenService from './TokenService.js';
+
+const tokenService = new TokenService()
 
 class UserService{
     async addUser(user){
@@ -37,8 +40,9 @@ class UserService{
                         name: validUser.nome,
                         phone: validUser.telefone,
                         birthDate: validUser.data_nascimento,
-                        email: validUser.email
-                    }
+                        email: validUser.email  
+                    },
+                    token: tokenService.generateToken(validUser)
                 }
 
             throw new Error('Credenciais inválidas')
@@ -51,6 +55,10 @@ class UserService{
         const res = await db('SELECT cod_usuario, nome, telefone, email, data_nascimento FROM usuarios WHERE cod_usuario = $1', [id])
 
         return res.rows[0] || null
+    }
+
+    async deleteUser(id){
+
     }
 }
 
