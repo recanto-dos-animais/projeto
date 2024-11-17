@@ -18,38 +18,14 @@ class UserService{
             return {
                 name: result.rows[0].nome,
                 id: result.rows[0].cod_usuario
-            } || null;
+            } || null
         } catch (error) {
-            console.log(error.message)
             if (error.message.includes('duplicar valor da chave viola a restrição de unicidade')) throw new Error('Usuário com este e-mail já existe')
             throw new Error(error.message)
         }
     }
 
-    async login(user){
-        const result = await db('SELECT * FROM usuarios WHERE email = $1', [user.email])
-
-        if (result.rows.length > 0) {
-            const validUser = result.rows[0]
-
-            if (await bcrypt.compare(user.password, validUser.senha))
-                return {
-                    authorized: true,
-                    user: {
-                        id: validUser.cod_usuario,
-                        name: validUser.nome,
-                        phone: validUser.telefone,
-                        birthDate: validUser.data_nascimento,
-                        email: validUser.email  
-                    },
-                    token: tokenService.generateToken({cod_usuario: validUser.cod_usuario, role: 'user'})
-                }
-
-            throw new Error('Credenciais inválidas')
-        }
-
-        throw new Error('Usuário com este email não existe')
-    }
+    
 
     async getUserById(id){
         const res = await db('SELECT cod_usuario, nome, telefone, email, data_nascimento FROM usuarios WHERE cod_usuario = $1', [id])

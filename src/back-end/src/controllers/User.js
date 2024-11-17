@@ -2,9 +2,11 @@ import express from 'express'
 import { randomUUID } from 'node:crypto'
 import UserService from '../services/UserService.js'
 import TokenService from '../services/TokenService.js'
+import AuthService from '../services/AuthService.js'
 
 const userService = new UserService()
 const tokenService = new TokenService()
+const authService = new AuthService()
 
 const router = express.Router()
 
@@ -41,7 +43,7 @@ router.post('/login', async (req, res) => {
     const {email, password} = req.body
 
     try {
-        const loginResponse = await userService.login({email, password})
+        const loginResponse = await authService.login({email, password}, 'usuarios')
 
         if (loginResponse.authorized)
             return res.status(200).json(loginResponse)
