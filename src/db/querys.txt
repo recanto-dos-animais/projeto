@@ -1,5 +1,4 @@
 CRIAÇÃO DE TABELAS:
-
 userQuery = `
   CREATE TABLE IF NOT EXISTS usuarios (
     cod_usuario TEXT PRIMARY KEY,
@@ -67,11 +66,20 @@ donationQuery = `
 `
 
 INSERÇÃO DE DADOS:
-
 insertUser = `INSERT INTO usuarios (cod_usuario, nome, data_nascimento, telefone, email, senha) VALUES ($1, $2, $3, $4, $5, $6) RETURNING *`
 insertAdmin = `INSERT INTO admins (cod_admin, nome, telefone, email, senha) VALUES ($1, $2, $3, $4, $5)`
 insertAnimal = `INSERT INTO animais (cod_animal, nome, especie, raca, idade, sexo, peso, descricao, status) VALUES ($1, $2 ,$3, $4, $5, $6, $7, $8, $9) RETURNING *`
 insertVolunteer = `INSERT INTO voluntarios (cod_voluntario, nome, telefone, endereco, data_nascimento, data_cadastro, email, senha) VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING *`
-insertAdoption = `INSERT INTO adocoes (cod_adocao, cod_animal, cod_usuario, status) VALUES ($1, $2, $3, $4, $5) RETURNING *`;
-insertDonation = `INSERT INTO adocoes (cod_doacao, cod_usuario, data_doacao, valor, produto) VALUES ($1, $2, $3, $4, $5) RETURNING *`;
+insertAdoption = `INSERT INTO adocoes (cod_adocao, cod_animal, cod_usuario, status) VALUES ($1, $2, $3, $4, $5) RETURNING *`
+insertDonation = `INSERT INTO adocoes (cod_doacao, cod_usuario, data_doacao, valor, produto) VALUES ($1, $2, $3, $4, $5) RETURNING *`
+
+EXCLUSÃO DE DADOS:
+deleteUserQuery = `DELETE FROM usuarios WHERE cod_usuario = $1`
+deleteAdminQuery = `DELETE FROM admins WHERE cod_admin = $1`
+deleteAnimalQuery = `DELETE FROM animais WHERE cod_animal = $1`
+deleteVolunteerQuery = `DELETE FROM voluntarios WHERE cod_voluntario = $1`
+deleteAdoptionQuery = `DELETE FROM adocoes WHERE cod_adocao = $1`
+deleteDonationQuery = `DELETE FROM doacoes WHERE cod_doacao = $1`
+
+
 
