@@ -17,3 +17,49 @@ adminQuery = `
     senha VARCHAR(200) NOT NULL
    );
   `
+animalQuery = `
+  CREATE TABLE IF NOT EXISTS animais (
+    cod_animal TEXT PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    especie VARCHAR(50) NOT NULL,
+    raca VARCHAR(50),
+    idade INTEGER,
+    sexo VARCHAR(50),
+    peso DECIMAL,
+    descricao VARCHAR(200),
+    status TEXT
+  );
+`
+volunteerQuery = `
+  CREATE TABLE IF NOT EXISTS voluntarios (
+    cod_voluntario TEXT PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    telefone VARCHAR(15),
+    endereco VARCHAR(100),
+    data_nascimento DATE,
+    data_cadastro DATE,
+    email VARCHAR(100) UNIQUE NOT NULL,
+    senha VARCHAR(200) NOT NULL
+  );
+`
+adoptionQuery = `
+  CREATE TABLE IF NOT EXISTS adocoes (
+    cod_adocao TEXT PRIMARY KEY,
+    cod_animal TEXT NOT NULL,
+    cod_usuario TEXT NOT NULL,
+    data_adocao DATE,
+    status TEXT,
+    FOREIGN KEY (cod_animal) REFERENCES animais(cod_animal) ON DELETE CASCADE,
+    FOREIGN KEY (cod_usuario) REFERENCES usuarios(cod_usuario) ON DELETE CASCADE
+  );
+`
+donationQuery = `
+  CREATE TABLE IF NOT EXISTS doacoes (
+    cod_doacao TEXT PRIMARY KEY,
+    cod_usuario TEXT NOT NULL,
+    data_doacao DATE,
+    valor DECIMAL,
+    produto VARCHAR(255),
+    FOREIGN KEY (cod_usuario) REFERENCES usuarios(cod_usuario) ON DELETE CASCADE
+  );
+`
