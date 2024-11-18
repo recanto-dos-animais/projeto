@@ -83,4 +83,17 @@ router.delete('/:id', async (req, res) => {
     }
 })
 
+router.put('/:id', async (req, res) => {
+    const {id} = req.params
+
+    const {email, password} = req.body
+
+    try {
+        const updatedUser = await userService.updateUser(id, {email, password})
+        return res.status(200).json(updatedUser)
+    } catch (error) {
+        return res.status(400).json({error: 'Nenhum campo para edição foi enviado.'})
+    }
+})
+
 export default router   

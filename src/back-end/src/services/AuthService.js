@@ -1,5 +1,5 @@
 import db from '../../db/db-config.js'
-import bcrypt from 'bcrypt'
+import bcrypt from 'bcryptjs'
 import TokenService from './TokenService.js';
 
 const tokenService = new TokenService()
@@ -11,17 +11,24 @@ class AuthService{
         if (result.rows.length > 0) {
             const validUser = result.rows[0]
 
+            const role = validUser.hasOwnProperty('permissao') ? validUser.permissao : 'user'
+            const id = validUser.hasOwnProperty('cod_voluntario') ? validUser.cod_voluntario : validUser.cod_usuario
+
+            console.log(role)
+            console.log(id)
+
             if (await bcrypt.compare(user.password, validUser.senha))
                 return {
                     authorized: true,
                     user: {
-                        id: validUser.cod_usuario,
+                        id: id,
                         name: validUser.nome,
                         phone: validUser.telefone,
                         birthDate: validUser.data_nascimento,
-                        email: validUser.email  
+                        email: validUser.email,
+                        role: role  
                     },
-                    token: tokenService.generateToken({cod_usuario: validUser.cod_usuario, role: 'user'})
+                    token: tokenService.generateToken({id, role})
                 }
 
             throw new Error('Credenciais inválidas')
