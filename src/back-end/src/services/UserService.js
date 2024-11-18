@@ -51,6 +51,39 @@ class UserService{
 
         return res.rows
     }
+
+    async updateUser(id, data){
+        console.log(data)
+        if (!data.email && !data.password) {
+            throw new Error('Nenhum dado enviado. Nada foi editado.');
+        }
+    
+        const fields = [];
+        const values = [];
+        let index = 1;
+    
+        if (data.email) {
+            fields.push(`email = $${index++}`);
+            values.push(data.email);
+        }
+        if (data.password) {
+            const hashedPassword = await bcrypt.hash(data.password);
+            fields.push(`password = $${index++}`);
+            values.push(hashedPassword);
+        }
+    
+        const query = `
+            UPDATE usuarios
+            SET ${fields.join(', ')}
+            WHERE cod_usuario = $${index}
+            RETURNING *;
+        `;
+    
+        values.push(id);
+    
+        const response = await db(query, values);
+        return response.rows[0];
+    }
 }
 
 
