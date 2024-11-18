@@ -1,0 +1,26 @@
+meta {
+  name: Registro
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{Local}}/usuarios/registrar
+  body: json
+  auth: none
+}
+
+query {
+  : 
+}
+
+body:json {
+  {
+      "name": "João Silva",
+      "email": "joao.silva@email.com",
+      "phone": "11987654321",
+      "password": "senhaSegura123",
+      "registerDate": "2024-11-17"
+  }
+  
+}

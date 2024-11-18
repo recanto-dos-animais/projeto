@@ -9,28 +9,25 @@ _Visão geral da interação do usuário por meio das telas do sistema. Apresent
 
 _Descrição da tela principal do sistema._
 
-[`Tela principal do sistema`](images/)
+[`Tela principal do sistema`](images/wireframe/home.png)
 
 
 ## 6.2. Telas do processo 1
 
 _Descrição da tela relativa à atividade 1._
 
-[`Tela da atividade 1`](images/)
+[`Tela da atividade 1`](images/wireframe/Como%20ajudar_.png)
 
-_Descrição da tela relativa à atividade 2._
-
-[`Tela da atividade 2`](images/)
 
 
 ## 6.3. Telas do processo 2
 
 _Descrição da tela relativa à atividade 1._
 
-[`Tela da atividade 1`](images/)
+[`RELATORIO`](images/wireframe/Login%20Voluntario.png)
 
 _Descrição da tela relativa à atividade 2._
 
-[`Tela da atividade 2`](images/)
+[`Editar relatorio`](images/wireframe/editar.png)
 
 
