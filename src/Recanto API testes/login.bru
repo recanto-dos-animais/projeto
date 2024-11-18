@@ -1,0 +1,22 @@
+meta {
+  name: login
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{Local}}/usuarios/login
+  body: json
+  auth: none
+}
+
+query {
+  : 
+}
+
+body:json {
+  {
+      "email": "joao.silva@email.com",
+      "password": "senhaSegura123"
+  }
+}

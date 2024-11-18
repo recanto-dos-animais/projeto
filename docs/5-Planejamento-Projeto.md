@@ -6,10 +6,6 @@
 
 > Apresente a divisão de papéis entre os membros do grupo em cada sprint. O desejável é que, em cada sprint, o aluno assuma papéis diferentes na disciplina. Siga o modelo do exemplo abaixo:
 
-### Sprint 1
-- Documentação: Maria
-### Sprint 2
-
 
 ## 5.1. Quadro de tarefas
 
@@ -48,6 +44,18 @@ Atualizado em: 27/10/2024
 | Samuel        | Arquitetura da solução          | 24/10/2024   | 27/10/2024 | ✔️      | 24/09/2024  |
 | Domiciano     | UML                             | 24/10/2024   | 27/10/2024 | ✔️      | 27/10/2024  |
 | Bruna         | Slide finalizado                | 27/10/2024   | 27/10/2024 | ✔️      | 27/10/2024  |
+
+
+## Sprint 4
+Atualizado em: 17/11/2024
+
+| Responsável | Tarefa/Requisito       | Iniciado em | Prazo       | Status       | Terminado em |
+|-------------|-------------------------|-------------|-------------|--------------|--------------|
+| Maria       | Frontend- Home e Animais| 10/11/2024  | 17/11/2024  | ✅ terminado | 17/11/2024   |
+| Bruna       | Frontend-cadastro/ajudar| 10/11/2024  | 17/11/2024  | ✅ terminado | 17/11/2024   |
+| Domiciano   | Backend-bd              | 10/11/2024  | 17/11/2024  | 📝 em execução | -          |
+| Samuel      | Backend-endpoints       | 10/11/2024  | 17/11/2024  | 📝 em execução | -          |
+
 
 Legenda:
 - ✔️: terminado
